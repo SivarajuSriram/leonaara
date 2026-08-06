@@ -1,0 +1,115 @@
+"use client";
+import React, { useRef, useState } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import AnimatedText from "./AnimatedText";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const images = [
+  {
+    key: "stripped-down",
+    label: "Stripped down",
+    src: "/media/2024/04/Kitchen-Stripped-Down.jpg",
+    alt: "Kitchen Stripped Down",
+  },
+  {
+    key: "full",
+    label: "Full",
+    src: "/media/2024/04/Kitchen-Full.jpg",
+    alt: "Kitchen Full",
+  },
+];
+
+export default function SleepUnderStars() {
+  const [active, setActive] = useState(0);
+  const mediaRef = useRef<HTMLDivElement>(null);
+  const activeImgRef = useRef<HTMLImageElement | null>(null);
+  const tagsRef = useRef<HTMLElement>(null);
+
+  // The image reveals like a curtain pulling apart (clip-path inset shrinking
+  // to 0) while the photo itself zooms out from a slight scale and fades in.
+  // The heading and tag toggle only start their own fade-ins once that
+  // curtain has finished opening, matching the original site's sequencing.
+  useGSAP(() => {
+    const media = mediaRef.current;
+    if (!media) return;
+
+    const tl = gsap.timeline({
+      scrollTrigger: { trigger: media, start: "top 80%", once: true },
+    });
+
+    tl.fromTo(media, { clipPath: "inset(4%)" }, { clipPath: "inset(0%)", duration: 1.85, ease: "power4.inOut" }, 0);
+    if (activeImgRef.current) {
+      tl.fromTo(activeImgRef.current, { opacity: 0 }, { opacity: 1, duration: 0.85, ease: "none" }, 0);
+      tl.fromTo(activeImgRef.current, { scale: 1.2 }, { scale: 1, duration: 2.2, ease: "power4.inOut" }, 0);
+    }
+    if (tagsRef.current) {
+      tl.fromTo(
+        Array.from(tagsRef.current.children),
+        { opacity: 0, y: 16 },
+        { opacity: 1, y: 0, duration: 0.5, stagger: 0.08, ease: "power2.out" },
+        1.3
+      );
+    }
+  }, { scope: mediaRef });
+
+  return (
+    <section className="relative w-full bg-[#f5f5e7] pb-16 text-brand-dark md:pb-24">
+      <div className="mx-auto w-full max-w-[1920px] px-6">
+        <div ref={mediaRef} className="relative ml-[50%] w-screen -translate-x-1/2 aspect-[16/9] overflow-hidden bg-gray-200">
+          {images.map((img, i) => (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              key={img.key}
+              ref={(el) => {
+                if (i === active) activeImgRef.current = el;
+              }}
+              src={img.src}
+              alt={img.alt}
+              className="absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ease-out"
+              style={{ opacity: active === i ? 1 : 0 }}
+            />
+          ))}
+
+          <header className="pointer-events-none absolute left-0 top-0 z-10 max-w-2xl p-6 md:p-10">
+            <h2 className="m-0 text-[20px] font-normal leading-[1.4] tracking-[-0.03em] text-white md:text-[32px] md:leading-none xl:text-[48px]">
+              <AnimatedText text="Your space, your story." className="justify-start" delay={1.5} />
+            </h2>
+          </header>
+
+          <nav ref={tagsRef} className="absolute bottom-0 left-0 md:left-1/2 md:-translate-x-1/2 z-10 flex items-center gap-[6px] p-[12px] md:p-[20px]">
+            {images.map((img, i) => (
+              <button
+                key={img.key}
+                onClick={() => setActive(i)}
+                aria-label={img.label}
+                className="group relative flex h-[26px] items-center justify-center overflow-hidden rounded-[4px] px-[14px]"
+              >
+                <span
+                  className={`absolute inset-0 bg-black transition-opacity ${
+                    active === i ? "opacity-50" : "opacity-20 group-hover:opacity-35"
+                  }`}
+                />
+                <span className="relative block h-[15px] overflow-hidden">
+                  <span
+                    aria-hidden="true"
+                    className="flex translate-y-[-15px] flex-col transition-transform duration-300 ease-out group-hover:translate-y-0"
+                  >
+                    <span className="h-[15px] text-[15px] uppercase leading-[15px] text-white">{img.label}</span>
+                    <span className="h-[15px] text-[15px] uppercase leading-[15px] text-white">{img.label}</span>
+                  </span>
+                </span>
+              </button>
+            ))}
+          </nav>
+        </div>
+
+        <p className="mt-6 max-w-sm text-[14px] leading-[1.42] text-[#333333] md:mt-8">
+          Customize your home to best match your lifestyle with our pre-designed interior and exterior options.
+        </p>
+      </div>
+    </section>
+  );
+}
