@@ -1,18 +1,21 @@
 "use client";
-import React from "react";
 
 const features = [
   {
-    title: "Lean on square footage, big on quality.",
-    text: "Reduce your footprint without sacrificing what's important. The basics, elevated.",
+    title: "What We Stand For",
+    text: "A home is where life grows. We value quality over speed, design over crowding, and build for the long term with complete honesty at every step.",
   },
   {
-    title: "Do more, with less.",
-    text: "Less time for worrying, more time for living.",
+    title: "The Leonaara Philosophy",
+    text: "We design homes around people, placing nature, space, light, and comfort at the heart of every detail. Technology is thoughtfully integrated to enhance everyday living, simplifying life without adding complexity.",
   },
   {
-    title: "Minimize the excess, maximize the essential.",
-    text: "It's the little things that matter the most, really.",
+    title: "What makes Leonaara Different",
+    text: "Fewer homes, thoughtfully designed with more open space, natural light, fresh air, and effortless flow. Smart, secure features and enduring quality ensure lasting comfort and value over time.",
+  },
+  {
+    title: "Our Approach to Building",
+    text: "We begin by understanding the land, using technology to create precise and thoughtful designs. We select durable materials and uphold uncompromising quality through every stage of development.",
   },
 ];
 

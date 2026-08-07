@@ -12,41 +12,25 @@ export default function UpgradeModelCards() {
 
   const cards = [
     {
-      title: "Flexibility",
-      subtitle: "An inclusive model",
-      text: "Our needs have also evolved. New realities call for innovative solutions, and our approach aims to provide you the flexibility to live on your own terms.",
+      title: "Human First",
+      text: "Because every space should begin with the lives it is meant to hold.",
       image: "/media/2024/02/NM_01-2.png"
     },
     {
-      title: "Simplicity",
-      subtitle: "More time to do less",
-      text: "An easy to manage home means less to worry about – giving you more time to do what you love with those you love.",
+      title: "Nature Always",
+      text: "Nature is not a layer we add later. It is the starting point of every creation, shaping the way spaces breathe, connect, & come alive. ",
       image: "/media/2024/02/NM_01-6.png"
     },
     {
-      title: "Adaptability",
-      subtitle: "Evolves with you over time",
-      text: "What if our homes could easily evolve with us over time? An extra module that attaches directly onto your home could become a personal greenhouse, studio or workshop.",
+      title: "Quiet Luxury",
+      text: "Inspired by simplicity, shaped by intention, & designed around the subtle details that make life extraordinary.",
       image: "/media/2024/02/NM_01-7.png"
     },
     {
-      title: "Self-Sustainability",
-      subtitle: "Geared towards self-sustainability",
-      text: "You are the master of your own domain. If going off-grid and growing some vegetables is your thing, then we want to help.",
+      title: "Built Forever",
+      text: "We create spaces not just for today, but for the stories, memories, & generations that follow.",
       image: "/media/2024/04/NM_01-2.png"
     },
-    {
-      title: "Wellness",
-      subtitle: "A key part of your wellbeing",
-      text: "Allowing yourself regular escapes into the wilderness may be the real key to a good routine. Your body, mind and soul will thank you.",
-      image: "/media/2024/02/NM_01-8.png"
-    },
-    {
-      title: "Community",
-      subtitle: "Built around common values",
-      text: "Base is building a community centered on simple, sustainable living. Our values as well as yours are what drive it forward.",
-      image: "/media/2024/04/Base-Logo.gif"
-    }
   ];
 
   const updateActiveIndex = () => {
@@ -186,9 +170,6 @@ export default function UpgradeModelCards() {
               </div>
 
               <div className="flex flex-col gap-3">
-                <p className="text-[16px] xl:text-[18px] leading-[1.11] text-brand-red font-normal">
-                  {card.subtitle}
-                </p>
                 <p className="text-[14px] xl:text-[16px] leading-snug text-black">
                   {card.text}
                 </p>

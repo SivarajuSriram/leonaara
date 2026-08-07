@@ -9,16 +9,16 @@ gsap.registerPlugin(ScrollTrigger);
 
 const images = [
   {
-    key: "base-1",
-    label: "Base 1",
+    key: "kadamba",
+    label: "Kadamba",
     src: "/media/2024/04/BASE_salon01-version2.jpg",
-    alt: "Base 1 living room",
+    alt: "Kadamba living room",
   },
   {
-    key: "base-1-plus",
-    label: "Base 1+",
+    key: "anantha-meadows",
+    label: "Anantha Meadows",
     src: "/media/2024/04/A-space-to-recharge-lifes-batteries-B.jpg",
-    alt: "Base 1+ living room",
+    alt: "Anantha Meadows living room",
   },
 ];
 
@@ -74,7 +74,7 @@ export default function BaseAdvantage() {
 
         <header className="pointer-events-none absolute left-0 top-0 z-10 max-w-2xl p-6 md:p-10">
           <h2 className="m-0 text-[20px] font-normal leading-[1.4] tracking-[-0.03em] text-white md:text-[32px] md:leading-none xl:text-[48px]">
-            <AnimatedText text="A space to recharge life's batteries." className="justify-start" delay={1.5} />
+            <AnimatedText text="Our Signature Creations" className="justify-start" delay={1.5} />
           </h2>
         </header>
 
