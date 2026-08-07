@@ -112,15 +112,6 @@ export default function Header({ light = false }: { light?: boolean }) {
           />
         </Link>
 
-        {/* Navigation */}
-        <div className="flex items-center gap-5">
-          <MagneticButton
-            href="#interested"
-            className="flex h-11 items-center justify-center rounded-[4px] bg-[#f5f5e7] px-5 text-[15px] font-medium text-black transition-colors duration-300 hover:bg-black hover:text-white"
-          >
-            I&apos;m interested
-          </MagneticButton>
-
           <nav className="hidden md:flex gap-5 text-xs uppercase font-normal">
             <Link href="/" onClick={handleLogoClick} className={NAV_LINK_CLASS}>
               Home
@@ -162,7 +153,6 @@ export default function Header({ light = false }: { light?: boolean }) {
               }`}
             ></span>
           </button>
-        </div>
       </div>
 
       {/* Mobile nav drawer */}
@@ -185,14 +175,6 @@ export default function Header({ light = false }: { light?: boolean }) {
           ))}
         </nav>
 
-        <div className="flex flex-col gap-6">
-          <MagneticButton
-            href="#interested"
-            className="flex h-12 w-full items-center justify-center rounded-[4px] bg-brand-red text-[15px] font-medium text-white transition-colors duration-300 hover:bg-black"
-          >
-            I&apos;m interested
-          </MagneticButton>
-        </div>
       </div>
     </header>
   );

@@ -5,27 +5,27 @@ import AnimatedText from "./AnimatedText";
 // TODO: replace with real founder names, roles, bios and headshots.
 const founders = [
   {
-    name: "Founder One",
-    role: "Co-Founder",
-    bio: "Placeholder bio copy — swap in the real founder bio here.",
+    name: "Ravikanth Reddy Busam",
+    role: "Founder & CEO",
+    bio: "Some build structures. A rare few build belief. Ravikanth Reddy Busam belongs to the latter. With 25+ years across finance, technology, and real estate, his journey has been guided by one belief, lasting value is built on integrity. From founding a global technology venture in 2008 to shaping 1M+ sq. ft. of development, serving 560+ homeowners, and creating ₹1000+ crores in value, his work reflects discipline, precision, and trust. ",
     image: "",
   },
   {
-    name: "Founder Two",
-    role: "Co-Founder",
-    bio: "Placeholder bio copy — swap in the real founder bio here.",
+    name: "Rajashekhar Reddy",
+    role: "Executive Director - Engineering",
+    bio: "With a strong foundation in engineering and execution, Rajashekhar Reddy brings strategic expertise and technical excellence to Leonaara as Executive Director (Engineering).",
     image: "",
   },
   {
-    name: "Founder Three",
-    role: "Co-Founder",
-    bio: "Placeholder bio copy — swap in the real founder bio here.",
+    name: "Avinash Reddy",
+    role: "Executive Director – Strategy & Customer Relations",
+    bio: "As Executive Director (Strategy & Customer Relations), Avinash Reddy brings a strong focus on strategic growth, customer experience, and long-term relationships. With a vision centered on trust and excellence, he ensures every interaction reflects Leonaara’s commitment to transparency, thoughtful service, and creating meaningful experiences for homeowners.",
     image: "",
   },
   {
-    name: "Founder Four",
-    role: "Co-Founder",
-    bio: "Placeholder bio copy — swap in the real founder bio here.",
+    name: "Srinivas Reddy",
+    role: "Executive Director – Projects & Liaisoning",
+    bio: "Srinivas Reddy leads Projects & Liaisoning at Leonaara with a focus on seamless execution, strategic coordination, and timely delivery. His expertise ensures every project moves forward with precision, compliance, and excellence.",
     image: "",
   },
 ];
@@ -42,7 +42,7 @@ export default function FounderCards() {
           </h2>
         </header>
 
-        <div className="flex w-full aspect-[3/1] gap-3 md:gap-4">
+        <div className="flex w-full h-[480px] gap-3 sm:h-[560px] md:h-[620px] md:gap-4 xl:h-[720px]">
           {founders.map((founder, i) => {
             const isActive = i === active;
             return (
@@ -52,15 +52,11 @@ export default function FounderCards() {
                 onClick={() => setActive(i)}
                 aria-expanded={isActive}
                 aria-label={`Show ${founder.name}'s bio`}
-                className="group relative flex h-full min-w-0 flex-col justify-end overflow-hidden rounded-[4px] bg-[#f5f5e7] text-left transition-[flex-grow] duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]"
+                className="group relative flex h-full min-w-0 flex-col justify-end overflow-hidden rounded-[4px] bg-neutral-300 text-left transition-[flex-grow] duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]"
                 style={{ flexGrow: isActive ? 2.4 : 1, flexBasis: 0 }}
               >
-                {/* Background image, fades in when active. */}
-                <div
-                  className={`absolute inset-0 transition-opacity duration-500 ${
-                    isActive ? "opacity-100" : "pointer-events-none opacity-0"
-                  }`}
-                >
+                {/* Background image / avatar fallback, always visible. */}
+                <div className="absolute inset-0">
                   {founder.image ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
@@ -69,28 +65,32 @@ export default function FounderCards() {
                       className="absolute inset-0 h-full w-full object-cover"
                     />
                   ) : (
-                    <div className="absolute inset-0 flex items-center justify-center bg-neutral-300 font-serif text-4xl text-neutral-500">
+                    <div className="absolute inset-0 flex items-center justify-center bg-neutral-300 font-serif text-6xl text-neutral-400">
                       {founder.name.charAt(0)}
                     </div>
                   )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 </div>
 
-                {/* Bordered info panel with the founder's name, role, and bio. */}
-                <div
-                  className={`absolute inset-x-0 bottom-0 z-10 flex flex-col justify-end gap-1 overflow-hidden rounded-[4px] border border-white/25 bg-black/20 backdrop-blur-sm p-4 transition-opacity duration-500 xl:p-6 ${
-                    isActive ? "opacity-100 delay-200" : "pointer-events-none opacity-0"
-                  }`}
-                >
+                {/* Info panel: name + role always visible, bio slides in when active. */}
+                <div className="relative z-10 flex flex-col gap-1 p-4 xl:p-6">
                   <h3 className="m-0 font-serif text-[16px] font-light text-white md:text-[18px] xl:text-[22px]">
                     {founder.name}
                   </h3>
-                  <p className="mt-1 text-[10px] uppercase tracking-wide text-white/70 md:text-[12px] xl:text-[13px]">
+                  <p className="text-[10px] uppercase tracking-wide text-white/70 md:text-[12px] xl:text-[13px]">
                     {founder.role}
                   </p>
-                  <p className="mt-3 hidden text-[13px] leading-snug text-white/90 lg:block xl:text-[14px]">
-                    {founder.bio}
-                  </p>
+                  <div
+                    className={`grid transition-[grid-template-rows] duration-500 ease-out ${
+                      isActive ? "grid-rows-[1fr] mt-2" : "grid-rows-[0fr]"
+                    }`}
+                  >
+                    <div className="overflow-hidden">
+                      <p className="text-[13px] leading-snug text-white/90 xl:text-[14px]">
+                        {founder.bio}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </button>
             );
