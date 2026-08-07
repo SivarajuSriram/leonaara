@@ -26,7 +26,7 @@ export default function BaseAdvantageStats() {
     <section className="relative w-full bg-[#f5f5e7] py-16 md:py-20 xl:py-24">
       <div className="mx-auto w-full max-w-[1920px] px-6">
         <SectionIntro
-          eyebrow="The Base Advantage"
+          eyebrow="The Leonaara Advantage"
           heading="Building faster and building better."
           body="Build smarter, build faster, waste less. Our prefabricated panels assemble up to 3X faster than conventional construction. Cutting happens in the factory, so most of the waste never reaches your land."
         />
@@ -41,7 +41,7 @@ export default function BaseAdvantageStats() {
               <p className="m-0 text-[14px] text-gray-600">{s.note}</p>
               <div className="mt-2 flex items-end gap-8 border-t border-black/10 pt-4">
                 <div>
-                  <p className="m-0 text-[12px] uppercase text-gray-500">Base</p>
+                  <p className="m-0 text-[12px] uppercase text-gray-500">Leonaara</p>
                   <p className="m-0 text-[18px]">{s.base}</p>
                 </div>
                 <div>

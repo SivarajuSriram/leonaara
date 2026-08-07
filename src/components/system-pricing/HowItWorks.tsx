@@ -6,7 +6,7 @@ const steps = [
   {
     n: "01",
     title: "Choose your model",
-    body: "Base I or Base I+. Two distinct homes built on the same high-performance panel system.",
+    body: "Leonaara I or Leonaara I+. Two distinct homes built on the same high-performance panel system.",
   },
   {
     n: "02",
@@ -15,8 +15,8 @@ const steps = [
   },
   {
     n: "03",
-    title: "Your Base Build System",
-    body: "This is where your project becomes real. You activate the Base Build System: plans, specifications, a certified builder, fixed-price guarantee, and performance milestones included.",
+    title: "Your Leonaara Build System",
+    body: "This is where your project becomes real. You activate the Leonaara Build System: plans, specifications, a certified builder, fixed-price guarantee, and performance milestones included.",
   },
   {
     n: "04",

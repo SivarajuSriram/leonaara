@@ -21,7 +21,7 @@ const buildAdvantage = [
   {
     title: "Build coordinated",
     subtitle: "We stay involved",
-    body: "Your certified builder gets the full documentation package. Base coordinates milestone check-ins during the build.",
+    body: "Your certified builder gets the full documentation package. Leonaara coordinates milestone check-ins during the build.",
   },
 ];
 
@@ -30,7 +30,7 @@ export default function BuildAdvantageGrid() {
     <section className="relative w-full bg-white py-16 md:py-20 xl:py-24">
       <div className="mx-auto w-full max-w-[1920px] px-6">
         <SectionIntro
-          eyebrow="Base Build Advantage"
+          eyebrow="Leonaara Build Advantage"
           heading="Less to figure out. More to look forward to."
           body="We've tested the materials, refined the details, and documented the build process. What's left for you is the fun part: picking a model and a design package."
         />

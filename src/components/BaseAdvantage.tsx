@@ -11,13 +11,13 @@ const images = [
   {
     key: "kadamba",
     label: "Kadamba",
-    src: "/media/2024/04/BASE_salon01-version2.jpg",
+    src: "/kadamba.webp",
     alt: "Kadamba living room",
   },
   {
     key: "anantha-meadows",
     label: "Anantha Meadows",
-    src: "/media/2024/04/A-space-to-recharge-lifes-batteries-B.jpg",
+    src: "/anme.webp",
     alt: "Anantha Meadows living room",
   },
 ];

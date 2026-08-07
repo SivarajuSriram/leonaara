@@ -19,7 +19,7 @@ const performance: PerformanceStat[] = [
     value: "0.25",
     unit: "ACH @ 50Pa",
     rows: [
-      ["Base", "0.25–0.29"],
+      ["Leonaara", "0.25–0.29"],
       ["Passive House", "0.6"],
       ["Conventional", "3.0–5.0"],
     ],
@@ -31,7 +31,7 @@ const performance: PerformanceStat[] = [
     value: "11–17.2",
     unit: "Hours",
     table: {
-      headers: ["", "BASE", "Conventional"],
+      headers: ["", "LEONAARA", "Conventional"],
       rows: [
         ["Walls", "11h", "4h"],
         ["Roof", "17.2h", "6h"],
@@ -56,7 +56,7 @@ const performance: PerformanceStat[] = [
     value: "-42",
     unit: "kg CO₂/m²",
     rows: [
-      ["Base: Building shell carbon average", "-42"],
+      ["Leonaara: Building shell carbon average", "-42"],
       ["Conventional: Building shell carbon average", "+45"],
     ],
     note: "Our bio-based building shells use materials that have absorbed more carbon than their production emitted.",
@@ -69,12 +69,12 @@ export default function PerformanceStats() {
       <div className="mx-auto w-full max-w-[1920px] px-6">
         <SectionIntro
           eyebrow="Performance"
-          heading="How does Base compare?"
+          heading="How does Leonaara compare?"
           body="We've tested the system in real conditions. Airtightness, thermal envelope, embodied carbon. Here's what we measured."
         />
         <Reveal delay={0.5} className="flex justify-center">
           <a
-            href="https://basehabitation.com/wp-content/uploads/2026/05/Base-Habitation-Technical-2026.pdf"
+            href="https://leonaara.com/wp-content/uploads/2026/05/Leonaara-Technical-2026.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-6 inline-flex items-center gap-1 text-[14px] font-medium uppercase text-black transition-colors hover:text-brand-red"

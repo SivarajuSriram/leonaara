@@ -38,22 +38,18 @@ export default function Hero({
 
   return (
     <div className="relative isolate">
-      {/* Video layer: pinned via sticky inside a 200vh box that overlaps 100vh into the
+      {/* Image layer: pinned via sticky inside a 200vh box that overlaps 100vh into the
           next section, so it stays visually static underneath the content scrolling over it,
           then releases once the overlap runs out. Sits behind all normal-flow content. */}
       <div className="absolute inset-x-0 top-0 -z-10 h-[200vh] w-full">
         <div className="sticky top-0 h-screen w-full overflow-hidden bg-brand-dark">
-          <video
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/hero-home.webp"
+            alt="Leonaara cabin in a snowy forest"
             className="h-full w-full object-cover"
-            width={1920}
-            height={1080}
-            muted
-            autoPlay
-            loop
-            playsInline
-            disableRemotePlayback
-            src="/media/2024/04/BASE_HERO_version2.mp4"
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/5 to-transparent" />
         </div>
       </div>
 

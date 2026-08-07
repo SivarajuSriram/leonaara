@@ -9,7 +9,7 @@ const comparison = [
   ["Certified builder", false, true],
   ["On-site milestone inspections", false, true],
   ["Tested performance targets", false, true],
-  ["Base support throughout build", false, true],
+  ["Leonaara support throughout build", false, true],
   ["Outcome defined before construction", false, true],
 ] as const;
 
@@ -34,7 +34,7 @@ export default function BuildComparison() {
           eyebrowClassName="text-white/50"
           heading="You're not buying pdfs. You're buying peace of mind."
           bodyClassName="text-white/70"
-          body="When you buy plans alone, what happens on site is up to your builder. When you buy the Base Build System, the outcome is defined before construction begins."
+          body="When you buy plans alone, what happens on site is up to your builder. When you buy the Leonaara Build System, the outcome is defined before construction begins."
         />
 
         <Reveal className="mx-auto mt-16 w-full max-w-[720px] rounded-[18px] bg-white/5 px-6 py-8 md:mt-20 md:px-12 md:py-10">
@@ -47,7 +47,7 @@ export default function BuildComparison() {
                     Plans alone
                   </th>
                   <th className="w-[110px] py-3 text-center text-[12px] font-medium uppercase tracking-wide text-white">
-                    Base Build System
+                    Leonaara Build System
                   </th>
                 </tr>
               </thead>

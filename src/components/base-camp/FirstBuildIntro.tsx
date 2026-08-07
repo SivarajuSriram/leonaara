@@ -21,7 +21,7 @@ export default function FirstBuildIntro() {
         </h2>
         <Reveal delay={0.4}>
           <p className="mt-6 max-w-md text-[14px] leading-[1.42] text-gray-600 md:text-[16px]">
-            Base Camp is our proof of concept, and you can spend the night in it. A complete Base I in Racine in
+            Leonaara Camp is our proof of concept, and you can spend the night in it. A complete Leonaara I in Racine in
             the Eastern Townships (QC), built with the same design, the same materials, and the same builders
             who&apos;ll work on your home.
           </p>

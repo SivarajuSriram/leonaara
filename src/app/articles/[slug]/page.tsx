@@ -1,4 +1,5 @@
 import React from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Header from "@/components/Header";
@@ -8,6 +9,36 @@ import { articles, getArticle, type Block } from "@/lib/articles";
 
 export function generateStaticParams() {
   return articles.map((a) => ({ slug: a.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const article = getArticle(slug);
+  if (!article) return {};
+
+  const description = `${article.title} — an update from Leonaara.`;
+
+  return {
+    title: article.title,
+    description,
+    openGraph: {
+      type: "article",
+      title: article.title,
+      description,
+      url: `https://leonaara.com/articles/${article.slug}`,
+      images: [article.img],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description,
+      images: [article.img],
+    },
+  };
 }
 
 // The live site bolds key phrases inline within paragraphs/list items using
@@ -79,7 +110,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 <div className="flex items-center gap-3">
                   <p className="m-0 text-[13px] text-gray-500">{article.date}</p>
                   <span className="rounded-full bg-[#f5f5e7] px-3 py-1 text-[11px] uppercase tracking-[0.06em] text-black">
-                    The Baseletter
+                    The Leonaara Letter
                   </span>
                 </div>
                 <h1 className="mt-6 text-[32px] font-normal leading-[1.05] tracking-[-0.04em] md:text-[48px] xl:text-[56px]">
@@ -214,7 +245,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                       <div className="flex items-center gap-3">
                         <p className="m-0 text-[12px] text-black">{a.date}</p>
                         <span className="rounded-full bg-[#f5f5e7] px-3 py-1 text-[11px] uppercase tracking-[0.06em] text-black">
-                          The Baseletter
+                          The Leonaara Letter
                         </span>
                       </div>
                       <h3 className="m-0 text-[16px] font-normal leading-[1.25] tracking-[-0.02em]">

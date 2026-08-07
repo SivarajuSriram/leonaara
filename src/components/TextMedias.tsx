@@ -12,7 +12,7 @@ export default function TextMedias() {
             <div className="sticky top-0 h-[50vh] w-full overflow-hidden rounded-[4px] lg:h-screen">
               <img
                 src="/media/2024/04/Base-Deck-Plus-Crop.jpg"
-                alt="Base Deck Plus"
+                alt="Leonaara Deck Plus"
                 className="w-full h-full object-cover"
                 loading="lazy"
                 onError={(e) => {
@@ -34,10 +34,10 @@ export default function TextMedias() {
                   </h3>
                 </div>
                 <div className="md:col-span-8 lg:col-span-9 flex flex-col gap-6 text-[16px] xl:text-[18px] leading-snug text-black">
-                  <p>Here at <strong className="font-normal text-brand-red">Base Habitation</strong>, we believe in doing a lot with a little. We champion a return to the basics for simpler, better living. We also believe in a better way to build, geared towards today&apos;s growing needs in order to weather tomorrow&apos;s challenges.</p>
+                  <p>Here at <strong className="font-normal text-brand-red">Leonaara</strong>, we believe in doing a lot with a little. We champion a return to the basics for simpler, better living. We also believe in a better way to build, geared towards today&apos;s growing needs in order to weather tomorrow&apos;s challenges.</p>
                   <p>We are from the North, based in Quebec, Canada with experience in harsh climates. That&apos;s why we are designing a sustainable product ecosystem highlighting natural and local materials that respond best to challenging environments.</p>
-                  <p>At its core, Base is an initiative to reconnect us to the wild, to our natural surroundings – to reclaim a sense of wonder of the world around us.</p>
-                  <p>Let the wild in.<br/>Find your Base.</p>
+                  <p>At its core, Leonaara is an initiative to reconnect us to the wild, to our natural surroundings – to reclaim a sense of wonder of the world around us.</p>
+                  <p>Let the wild in.<br/>Find your Leonaara.</p>
                 </div>
               </div>
 
@@ -62,8 +62,8 @@ export default function TextMedias() {
                   </h3>
                 </div>
                 <div className="md:col-span-8 lg:col-span-9 flex flex-col gap-6 text-[16px] xl:text-[18px] leading-snug text-black">
-                  <p>Hi! I&apos;m Julien, founder of Base Habitation. As an architect with experience in the Arctic, the Amazonian jungle and Copenhagen, I&apos;ve had the chance to study some truly amazing ways of living. They almost always come down to two basic ideas: building smarter and living simpler.</p>
-                  <p>Shouldn&apos;t we strive for that too? I think so – and that&apos;s why I created <em>Base</em>.</p>
+                  <p>Hi! I&apos;m Julien, founder of Leonaara. As an architect with experience in the Arctic, the Amazonian jungle and Copenhagen, I&apos;ve had the chance to study some truly amazing ways of living. They almost always come down to two basic ideas: building smarter and living simpler.</p>
+                  <p>Shouldn&apos;t we strive for that too? I think so – and that&apos;s why I created <em>Leonaara</em>.</p>
                 </div>
               </div>
 

@@ -7,21 +7,21 @@ import AnimatedText from "./AnimatedText";
 
 const models = [
   {
-    name: "Base I",
+    name: "Leonaara I",
     price: "From $295,000",
     size: "785 sq. ft.",
     beds: "1-2 Bedrooms",
     image: "https://images.unsplash.com/photo-1542662053-15df15e8bfa1?q=80&w=1200&auto=format&fit=crop",
   },
   {
-    name: "Base II",
+    name: "Leonaara II",
     price: "From $360,000",
     size: "1,000 sq. ft.",
     beds: "2-3 Bedrooms",
     image: "https://images.unsplash.com/photo-1542661556-9e65ea0e4fde?q=80&w=1200&auto=format&fit=crop",
   },
   {
-    name: "Base III",
+    name: "Leonaara III",
     price: "From $490,000",
     size: "1,460 sq. ft.",
     beds: "3-4 Bedrooms",
@@ -59,7 +59,7 @@ export default function ModelSlider() {
           <div>
             <p className="text-xs uppercase tracking-[0.2em] font-medium text-gray-500 mb-6">Models</p>
             <AnimatedText 
-              text="Two base models. Unlimited adventures." 
+              text="Two Leonaara models. Unlimited adventures."
               className="text-huge max-w-4xl" 
             />
           </div>

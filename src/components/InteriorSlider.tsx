@@ -116,7 +116,7 @@ export default function InteriorSlider() {
     <section className="relative w-full bg-white pt-8 pb-10 text-brand-dark md:pt-10 md:pb-12">
       <div className="mx-auto w-full max-w-[1920px] px-6">
         <p className="max-w-sm text-[14px] leading-[1.42] text-[#333333]">
-          Either in the bedroom loft or the BASE I+ bedroom, you can sleep easy knowing your cabin is quietly working away to keep you safe and comfortable.
+          Either in the bedroom loft or the LEONAARA I+ bedroom, you can sleep easy knowing your cabin is quietly working away to keep you safe and comfortable.
         </p>
       </div>
     </section>

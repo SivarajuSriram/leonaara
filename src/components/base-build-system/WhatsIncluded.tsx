@@ -13,19 +13,19 @@ const included = [
   {
     n: "02",
     title: "Curated design package + design meeting",
-    body: "Pre-developed palettes of cladding, finishes, lighting, and hardware. You finalize your selections in a dedicated meeting with Base, and it all gets documented before the build starts.",
+    body: "Pre-developed palettes of cladding, finishes, lighting, and hardware. You finalize your selections in a dedicated meeting with Leonaara, and it all gets documented before the build starts.",
     collapsible: true,
   },
   {
     n: "03",
     title: "Certified builder",
-    body: "A builder trained and certified on the Base panel system. Your construction price is clear before the build begins.",
+    body: "A builder trained and certified on the Leonaara panel system. Your construction price is clear before the build begins.",
     collapsible: true,
   },
   {
     n: "04",
     title: "On-site milestone inspections",
-    body: "Base checks in at key stages. Foundation, envelope close, millwork installation, final walkthrough.",
+    body: "Leonaara checks in at key stages. Foundation, envelope close, millwork installation, final walkthrough.",
     collapsible: true,
   },
   {
@@ -36,7 +36,7 @@ const included = [
   },
   {
     n: "06",
-    title: "Direct access to Base",
+    title: "Direct access to Leonaara",
     body: "A dedicated point of contact from first call to moving day. Questions go straight to us, not a call center.",
     collapsible: true,
   },

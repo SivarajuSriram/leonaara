@@ -24,7 +24,7 @@ interface ModelData {
 const models: ModelData[] = [
   {
     id: "base-1",
-    title: "Base 1",
+    title: "Leonaara 1",
     defaultColor: "black",
     colors: {
       black: [
@@ -50,7 +50,7 @@ const models: ModelData[] = [
   },
   {
     id: "base-1-plus",
-    title: "Base 1+",
+    title: "Leonaara 1+",
     defaultColor: "beige",
     colors: {
       beige: [
@@ -68,7 +68,7 @@ const models: ModelData[] = [
     ],
     spec: "1-2 Bedrooms + 1 sleeping loft – 1200 sq ft",
     description:
-      "Our upgraded model offers an extra bedroom off the end of the cabin. You'll find everything else just as it is in the BASE 1. The total area includes a 200 sq ft sleeping loft.",
+      "Our upgraded model offers an extra bedroom off the end of the cabin. You'll find everything else just as it is in the LEONAARA 1. The total area includes a 200 sq ft sleeping loft.",
     plans: [
       "/media/2024/03/Base-1-RDC-1.png",
       "/media/2024/03/Base-1-Mezz-1.png",

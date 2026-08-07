@@ -10,7 +10,7 @@ export default function MediaGalleryDuo() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/media/2026/04/Base-Camp-Lao-033-1800x1197.jpg"
-              alt="Base Camp exterior in the snow"
+              alt="Leonaara Camp exterior in the snow"
               className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
@@ -18,7 +18,7 @@ export default function MediaGalleryDuo() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/media/2026/04/Base-Camp-Lao-006-1-scaled.jpg"
-              alt="Base Camp prototype in the woods"
+              alt="Leonaara Camp prototype in the woods"
               className="absolute inset-0 h-full w-full object-cover"
             />
           </div>

@@ -116,11 +116,11 @@ export default function ContactForm() {
       <div className="mx-auto w-full max-w-[1920px] px-6">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16 xl:gap-24">
           <div className="flex flex-col gap-8">
-            <h2 className="m-0 text-[28px] font-normal leading-none tracking-[-0.04em] md:text-[36px] xl:text-[48px]">
+            <p className="m-0 text-[28px] font-normal leading-none tracking-[-0.04em] md:text-[36px] xl:text-[48px]">
               <span className="whitespace-nowrap">We’d love to hear from you.</span>
               <br />
               Let&apos;s chat.
-            </h2>
+            </p>
             <div className="flex flex-col gap-4">
               <p className="m-0 text-[12px] uppercase leading-[1.5] text-[#828282] xl:text-[14px]">Start here</p>
               <p className="m-0 max-w-md text-[14px] leading-[1.42]">

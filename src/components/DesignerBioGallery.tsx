@@ -5,11 +5,11 @@ import AnimatedText from "./AnimatedText";
 
 const images = [
   {
-    label: "Base Deck +",
+    label: "Leonaara Deck +",
     src: "/media/2024/04/Deck-Plus.jpg",
   },
   {
-    label: "Base Deck",
+    label: "Leonaara Deck",
     src: "/media/2024/04/BASE_deck01-version2.jpg",
   },
 ];
@@ -28,7 +28,7 @@ export default function DesignerBioGallery() {
             />
           </h2>
           <div className="text-[14px] xl:text-[16px] leading-snug text-[#333333] md:pt-4">
-            <p>Enhance your model with pre-designed add-ons like the <em>Base Deck</em> and the <em>Base Deck+</em>. Additional items are also available through key partnerships.</p>
+            <p>Enhance your model with pre-designed add-ons like the <em>Leonaara Deck</em> and the <em>Leonaara Deck+</em>. Additional items are also available through key partnerships.</p>
           </div>
         </header>
 

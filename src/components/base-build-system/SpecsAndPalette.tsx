@@ -70,7 +70,7 @@ const roofUpgrade = {
 };
 
 const addons = [
-  { title: "Custom couch and stools", body: "Custom-designed seating for Base homes" },
+  { title: "Custom couch and stools", body: "Custom-designed seating for Leonaara homes" },
   { title: "Custom lighting", body: "Custom lighting designed for each zone of the home" },
   { title: "Stainless steel bench and log holder", body: "Functional pieces in brushed stainless steel" },
   { title: "Stainless steel accessories", body: "Interior and exterior hooks, entrance ledge" },
@@ -116,7 +116,7 @@ export default function SpecsAndPalette() {
             <span className="text-brand-red">{openPanels.palette ? "−" : "+"}</span> Your palette
           </button>
           <p className="mx-auto mt-3 max-w-md text-center text-[14px] text-black/60">
-            Every Base starts with one of two palettes. Every option can be swapped.
+            Every Leonaara starts with one of two palettes. Every option can be swapped.
           </p>
           <div
             className={`grid transition-[grid-template-rows] duration-500 ease-out ${
@@ -163,7 +163,7 @@ export default function SpecsAndPalette() {
             <span className="text-brand-red">{openPanels.addons ? "−" : "+"}</span> Add-ons
           </button>
           <p className="mx-auto mt-3 max-w-md text-center text-[14px] text-black/60">
-            Pieces designed specifically for Base homes. Available as add-ons to any model.
+            Pieces designed specifically for Leonaara homes. Available as add-ons to any model.
           </p>
           <div
             className={`grid transition-[grid-template-rows] duration-500 ease-out ${

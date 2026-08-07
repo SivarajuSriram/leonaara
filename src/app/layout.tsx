@@ -18,9 +18,39 @@ const playfair = Playfair_Display({
   style: ["normal", "italic"],
 });
 
+const siteTitle = "Leonaara - Let the wild in. Find your Leonaara.";
+const siteDescription =
+  "We produce high-performance, compact homes that let you escape the everyday to a space that is good for you and good for the planet.";
+
 export const metadata: Metadata = {
-  title: "Base Habitation - Let the wild in. Find your Base.",
-  description: "We produce high-performance, compact homes that let you escape the everyday to a space that is good for you and good for the planet.",
+  metadataBase: new URL("https://leonaara.com"),
+  title: {
+    default: siteTitle,
+    template: "%s | Leonaara",
+  },
+  description: siteDescription,
+  openGraph: {
+    type: "website",
+    url: "https://leonaara.com",
+    siteName: "Leonaara",
+    title: siteTitle,
+    description: siteDescription,
+    locale: "en_US",
+    images: [
+      {
+        url: "/leonara-logo-color.webp",
+        width: 1600,
+        height: 900,
+        alt: "Leonaara",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+    images: ["/leonara-logo-color.webp"],
+  },
 };
 
 export default function RootLayout({

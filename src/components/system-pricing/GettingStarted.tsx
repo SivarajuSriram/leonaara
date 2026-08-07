@@ -15,9 +15,9 @@ const gettingStarted = [
     cta: "Learn more about the system",
   },
   {
-    title: "Base Certified Builders",
-    body: "See if we have Base Certified Builders in your area. If not, let us know and we'll onboard one near you.",
-    cta: "Get the Base Certified Builder list",
+    title: "Leonaara Certified Builders",
+    body: "See if we have Leonaara Certified Builders in your area. If not, let us know and we'll onboard one near you.",
+    cta: "Get the Leonaara Certified Builder list",
   },
 ];
 

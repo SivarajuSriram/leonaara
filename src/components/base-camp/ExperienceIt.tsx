@@ -5,21 +5,21 @@ import SectionIntro from "@/components/SectionIntro";
 const experience = [
   {
     title: "Book a stay",
-    body: "Stay at Base Camp through BESIDE. Cook, sleep, feel the difference. The best way to understand a Base is to live in one.",
+    body: "Stay at Leonaara Camp through BESIDE. Cook, sleep, feel the difference. The best way to understand a Leonaara is to live in one.",
     cta: "Book a stay",
     href: "/#interested",
   },
   {
     title: "Schedule a visit",
-    body: "Walk through with Base's founder. Touch the panels, see the systems, ask anything.",
+    body: "Walk through with Leonaara's founder. Touch the panels, see the systems, ask anything.",
     cta: "Schedule a visit",
     href: "/#interested",
   },
   {
     title: "Follow along",
-    body: "Follow @basehabitation for updates on new builds, behind-the-scenes, and the next chapter.",
+    body: "Follow @leonaara for updates on new builds, behind-the-scenes, and the next chapter.",
     cta: "Follow on Instagram",
-    href: "https://www.instagram.com/basehabitation/",
+    href: "https://www.instagram.com/leonaara/",
   },
 ];
 
@@ -32,7 +32,7 @@ export default function ExperienceIt() {
           eyebrow="Experience it"
           heading="Come see for yourself."
           headingMaxWidth="max-w-2xl"
-          body="Base Camp is living proof of what Base stands for. Here are a few ways to check it out."
+          body="Leonaara Camp is living proof of what Leonaara stands for. Here are a few ways to check it out."
         />
 
         <Reveal className="grid grid-cols-1 gap-6 md:grid-cols-3" stagger={0.12} y={30}>

@@ -13,12 +13,12 @@ export default function RedefiningCottageFeatures() {
     },
     {
       title: "Climate-resilient, natural materials",
-      text: "The Base Panel System sets itself apart by using only high-performance, natural and local materials like wood fiber and hemp insulation. The result is a shell of carbon-neutral wall and roof panels.",
+      text: "The Leonaara Panel System sets itself apart by using only high-performance, natural and local materials like wood fiber and hemp insulation. The result is a shell of carbon-neutral wall and roof panels.",
       image: "/media/2024/04/20240315_Base_Material_Section_D-scaled.jpg"
     },
     {
       title: "A home that adapts with you over time",
-      text: "With our evolutive Base Ecosystem, our homes have the ability to be expanded and upgraded. That means they can keep up with your evolving needs and budget.",
+      text: "With our evolutive Leonaara Ecosystem, our homes have the ability to be expanded and upgraded. That means they can keep up with your evolving needs and budget.",
       image: "/media/2024/04/Adapts-with-you-over-time.png"
     }
   ];

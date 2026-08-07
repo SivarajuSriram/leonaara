@@ -12,9 +12,9 @@ export default function Baseletter() {
             className="justify-center"
           />
           <AnimatedText
-            text="Follow the Baseletter for more."
+            text="Follow the Leonaara Letter for more."
             className="justify-center"
-            highlightWord="Baseletter"
+            highlightWord="Leonaara"
           />
         </h2>
 

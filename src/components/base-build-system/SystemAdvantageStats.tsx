@@ -30,7 +30,7 @@ export default function SystemAdvantageStats() {
           eyebrowClassName="text-white/50"
           heading="The system removes the uncertainty."
           bodyClassName="text-white/70"
-          body="Custom builds come with custom problems. Budget overruns, hundreds of decisions, and outcomes that depend on who shows up on site. The Base System locks everything down before construction begins."
+          body="Custom builds come with custom problems. Budget overruns, hundreds of decisions, and outcomes that depend on who shows up on site. The Leonaara System locks everything down before construction begins."
         />
 
         <Reveal className="mt-16 grid grid-cols-1 gap-6 md:mt-20 md:grid-cols-2" stagger={0.15} y={30}>
@@ -43,7 +43,7 @@ export default function SystemAdvantageStats() {
               <p className="m-0 text-[14px] text-white/70">{s.note}</p>
               <div className="mt-2 flex items-end gap-8 border-t border-white/15 pt-4">
                 <div>
-                  <p className="m-0 text-[12px] uppercase text-white/50">Base</p>
+                  <p className="m-0 text-[12px] uppercase text-white/50">Leonaara</p>
                   <p className="m-0 text-[18px] text-white">{s.base}</p>
                 </div>
                 <div>

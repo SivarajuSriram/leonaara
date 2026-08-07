@@ -5,7 +5,7 @@ import SectionIntro from "@/components/SectionIntro";
 
 const pricingCards = [
   {
-    model: "Base 1",
+    model: "Leonaara 1",
     spec: "1 Sleeping Loft – 960 sq ft",
     price: "$414 000",
     img: "/media/2026/04/BACK_A_Dark_Adjusted-copy.png",
@@ -20,7 +20,7 @@ const pricingCards = [
     ],
   },
   {
-    model: "Base 1+",
+    model: "Leonaara 1+",
     spec: "1-2 Bedrooms + 1 Sleeping Loft – 1200 sq ft",
     price: "$529 000",
     img: "/media/2026/04/BACK_B_Light_V3-copy.png",
@@ -86,7 +86,7 @@ export default function PricingCards() {
                 }`}
               >
                 <div className="flex items-baseline justify-between gap-4">
-                  <span className={c.featured ? "text-gray-500" : "text-white/60"}>Base Build System</span>
+                  <span className={c.featured ? "text-gray-500" : "text-white/60"}>Leonaara Build System</span>
                   <span className="font-medium">{c.system}</span>
                 </div>
                 <div className="flex items-baseline justify-between gap-4">
@@ -94,7 +94,7 @@ export default function PricingCards() {
                   <span className="font-medium">{c.construction}</span>
                 </div>
                 <p className={`m-0 ${c.featured ? "text-gray-500" : "text-white/60"}`}>
-                  Final price confirmed with Base-Certified Builder
+                  Final price confirmed with Leonaara-Certified Builder
                 </p>
                 <div className="flex items-baseline justify-between gap-4 border-t border-current/10 pt-2 text-[16px]">
                   <span>Total</span>
@@ -138,7 +138,7 @@ export default function PricingCards() {
 
         <p className="mt-10 text-center text-[13px] text-white/50">
           These prices are estimates only and subject to change. Confirm final pricing with one of our
-          Base-Certified Builders.
+          Leonaara-Certified Builders.
         </p>
 
         <Reveal
@@ -147,7 +147,7 @@ export default function PricingCards() {
         >
           <h3 className="m-0 text-[24px] font-normal tracking-[-0.02em] md:text-[32px]">Already on the list?</h3>
           <a
-            href="mailto:info@basehabitation.com"
+            href="mailto:info@leonaara.com"
             className="inline-flex h-12 items-center justify-center rounded-[4px] bg-white px-8 text-[15px] font-medium uppercase text-black transition-colors hover:bg-brand-red hover:text-white"
           >
             Connect with us
