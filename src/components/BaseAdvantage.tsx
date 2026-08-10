@@ -78,7 +78,7 @@ export default function BaseAdvantage() {
           </h2>
         </header>
 
-        <nav ref={tagsRef} className="absolute bottom-0 left-0 md:left-1/2 md:-translate-x-1/2 z-10 flex items-center gap-[6px] p-[12px] md:p-[20px]">
+        <nav ref={tagsRef} className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 flex items-center gap-[6px] p-[12px] md:p-[20px]">
           {images.map((img, i) => (
             <button
               key={img.key}
@@ -96,8 +96,8 @@ export default function BaseAdvantage() {
                   aria-hidden="true"
                   className="flex translate-y-[-15px] flex-col transition-transform duration-300 ease-out group-hover:translate-y-0"
                 >
-                  <span className="h-[15px] text-[15px] uppercase leading-[15px] text-white">{img.label}</span>
-                  <span className="h-[15px] text-[15px] uppercase leading-[15px] text-white">{img.label}</span>
+                  <span className="h-[15px] whitespace-nowrap text-[15px] uppercase leading-[15px] text-white">{img.label}</span>
+                  <span className="h-[15px] whitespace-nowrap text-[15px] uppercase leading-[15px] text-white">{img.label}</span>
                 </span>
               </span>
             </button>
