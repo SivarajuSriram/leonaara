@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import AnimatedText from "./AnimatedText";
 
 // TODO: replace with real founder names, roles, bios and headshots.
 const founders = [
@@ -34,15 +33,15 @@ export default function FounderCards() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="w-full bg-white text-black pt-[30px] pb-[60px] md:pt-[50px] md:pb-[100px] xl:pt-[70px] xl:pb-[200px]">
+    <section className="w-full bg-white text-black pt-[30px] pb-[60px] md:pt-[50px] md:pb-[80px] xl:pt-[70px] xl:pb-[100px]">
       <div className="container mx-auto px-6 max-w-[1920px]">
-        <header className="mb-8 md:mb-12">
-          <h2 className="m-0 text-[20px] font-normal leading-[1.4] tracking-[-0.03em] text-black md:text-[32px] md:leading-none xl:text-[48px]">
-            <AnimatedText text="Meet the Minds Shaping Tomorrow’s Spaces" className="justify-start !flex-nowrap" />
+        <header className="mb-4 md:mb-12">
+          <h2 className="m-0 text-[20px] font-normal leading-[1.4] tracking-[-0.03em] text-black md:text-[32px] md:leading-none xl:text-[48px] md:whitespace-nowrap">
+            Meet the Minds Shaping Tomorrow’s Spaces
           </h2>
         </header>
 
-        <div className="flex w-full h-[480px] gap-3 sm:h-[560px] md:h-[620px] md:gap-4 xl:h-[720px]">
+        <div className="flex w-full flex-col h-[520px] gap-3 sm:h-[560px] md:h-[620px] md:flex-row md:gap-4 xl:h-[720px]">
           {founders.map((founder, i) => {
             const isActive = i === active;
             return (
@@ -52,7 +51,7 @@ export default function FounderCards() {
                 onClick={() => setActive(i)}
                 aria-expanded={isActive}
                 aria-label={`Show ${founder.name}'s bio`}
-                className="group relative flex h-full min-w-0 flex-col justify-end overflow-hidden rounded-[4px] bg-neutral-300 text-left transition-[flex-grow] duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]"
+                className={`group relative ${isActive ? "flex" : "hidden"} h-full min-w-0 flex-col justify-end overflow-hidden rounded-[4px] bg-neutral-300 text-left transition-[flex-grow] duration-700 ease-[cubic-bezier(0.65,0,0.35,1)] md:flex`}
                 style={{ flexGrow: isActive ? 2.4 : 1, flexBasis: 0 }}
               >
                 {/* Background image / avatar fallback, always visible. */}
@@ -95,6 +94,30 @@ export default function FounderCards() {
               </button>
             );
           })}
+        </div>
+
+        {/* Carousel controls: mobile only, since the desktop accordion shows
+            all four cards side by side and doesn't need them. */}
+        <div className="mt-4 flex items-center justify-between md:hidden">
+          <button
+            type="button"
+            onClick={() => setActive((active - 1 + founders.length) % founders.length)}
+            aria-label="Previous founder"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-black/20 text-[16px]"
+          >
+            ←
+          </button>
+          <span className="text-[12px] uppercase tracking-wide text-black/60">
+            {String(active + 1).padStart(2, "0")} / {String(founders.length).padStart(2, "0")}
+          </span>
+          <button
+            type="button"
+            onClick={() => setActive((active + 1) % founders.length)}
+            aria-label="Next founder"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-black/20 text-[16px]"
+          >
+            →
+          </button>
         </div>
       </div>
     </section>

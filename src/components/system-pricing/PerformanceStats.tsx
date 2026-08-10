@@ -77,7 +77,7 @@ export default function PerformanceStats() {
             href="https://leonaara.com/wp-content/uploads/2026/05/Leonaara-Technical-2026.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 inline-flex items-center gap-1 text-[14px] font-medium uppercase text-black transition-colors hover:text-brand-red"
+            className="mt-6 inline-flex items-center gap-1 text-[14px] font-medium uppercase text-black transition-colors md:hover:text-brand-red"
           >
             See full comparison specs
             <span>→</span>

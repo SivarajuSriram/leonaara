@@ -38,10 +38,10 @@ export default function GettingStarted() {
               <p className="m-0 flex-1 text-[14px] leading-[1.42] text-gray-600">{item.body}</p>
               <Link
                 href="/#interested"
-                className="group inline-flex items-center gap-1 text-[14px] font-medium uppercase text-black transition-colors hover:text-brand-red"
+                className="group inline-flex items-center gap-1 text-[14px] font-medium uppercase text-black transition-colors md:hover:text-brand-red"
               >
                 {item.cta}
-                <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                <span className="transition-transform duration-300 md:group-hover:translate-x-1">→</span>
               </Link>
             </div>
           ))}

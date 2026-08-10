@@ -29,9 +29,17 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
 
     (window as typeof window & { __lenis?: Lenis }).__lenis = lenis;
 
+    // Mobile browsers resize the visual viewport as their address bar
+    // collapses/expands mid-scroll, which can leave Lenis's cached scroll
+    // limit stale right at the page bottom — this is what caused the fixed
+    // footer reveal to visibly desync from the content sliding over it.
+    const onViewportResize = () => lenis.resize();
+    window.visualViewport?.addEventListener("resize", onViewportResize);
+
     return () => {
       gsap.ticker.remove(tick);
       lenis.destroy();
+      window.visualViewport?.removeEventListener("resize", onViewportResize);
       delete (window as typeof window & { __lenis?: Lenis }).__lenis;
     };
   }, []);

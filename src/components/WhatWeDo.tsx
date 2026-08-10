@@ -33,7 +33,7 @@ export default function WhatWeDo() {
 
   return (
     <section ref={containerRef} className="relative pt-0 pb-0 md:pt-0 md:pb-0 lg:pt-0 lg:pb-0 mt-0 mb-0 md:mt-0 md:mb-0 lg:mt-0 lg:mb-0 bg-white text-black">
-      <header className="w-full max-w-[1920px] mx-auto px-6 flex flex-col items-center py-[100px] md:py-[150px]">
+      <header className="w-full max-w-[1920px] mx-auto px-6 flex flex-col items-center py-[50px] md:py-[150px]">
         <div>
           <p className="text-[12px] md:text-[14px] font-normal leading-[1.16] md:leading-none text-center uppercase m-0">The Birth of Leonaara</p>
         </div>
@@ -44,7 +44,7 @@ export default function WhatWeDo() {
           <AnimatedLines
             className="text-center"
             lines={[
-              { content: "Inspired by the Forces That" },
+              { content: "Inspired by the Forces that" },
               {
                 content: (
                   <>

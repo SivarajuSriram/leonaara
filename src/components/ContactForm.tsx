@@ -85,7 +85,7 @@ function PhoneField() {
                     setOpen(false);
                     setSearch("");
                   }}
-                  className="flex w-full items-center gap-3 px-3 py-2 text-left text-[13px] text-black hover:bg-black/5"
+                  className="flex w-full items-center gap-3 px-3 py-2 text-left text-[13px] text-black md:hover:bg-black/5"
                 >
                   <FlagImage iso2={c.iso2} size={18} />
                   <span className="flex-1 truncate">{c.name}</span>
@@ -117,12 +117,11 @@ export default function ContactForm() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16 xl:gap-24">
           <div className="flex flex-col gap-8">
             <p className="m-0 text-[28px] font-normal leading-none tracking-[-0.04em] md:text-[36px] xl:text-[48px]">
-              <span className="whitespace-nowrap">We’d love to hear from you.</span>
+              <span>We’d love to hear from you.</span>
               <br />
               Let&apos;s chat.
             </p>
             <div className="flex flex-col gap-4">
-              <p className="m-0 text-[12px] uppercase leading-[1.5] text-[#828282] xl:text-[14px]">Start here</p>
               <p className="m-0 max-w-md text-[14px] leading-[1.42]">
                 Fill in the form below to share your interest with us. We will contact you with next steps to follow.
               </p>
@@ -150,7 +149,7 @@ export default function ContactForm() {
 
             <button
               type="submit"
-              className="mt-2 h-12 w-full rounded-[4px] bg-black text-[15px] font-medium uppercase text-white transition-colors hover:bg-brand-red md:w-fit md:px-10"
+              className="mt-2 h-12 w-full rounded-[4px] bg-black text-[15px] font-medium uppercase text-white transition-colors md:hover:bg-brand-red md:w-fit md:px-10"
             >
               {submitted ? "Thank you!" : "Submit"}
             </button>

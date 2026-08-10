@@ -126,8 +126,8 @@ export default function PricingCards() {
                 href="/#interested"
                 className={`mt-2 inline-flex h-12 items-center justify-center rounded-[4px] text-[15px] font-medium uppercase transition-colors ${
                   c.featured
-                    ? "bg-black text-white hover:bg-brand-red"
-                    : "bg-white text-black hover:bg-brand-red hover:text-white"
+                    ? "bg-black text-white md:hover:bg-brand-red"
+                    : "bg-white text-black md:hover:bg-brand-red md:hover:text-white"
                 }`}
               >
                 Get in touch
@@ -148,7 +148,7 @@ export default function PricingCards() {
           <h3 className="m-0 text-[24px] font-normal tracking-[-0.02em] md:text-[32px]">Already on the list?</h3>
           <a
             href="mailto:info@leonaara.com"
-            className="inline-flex h-12 items-center justify-center rounded-[4px] bg-white px-8 text-[15px] font-medium uppercase text-black transition-colors hover:bg-brand-red hover:text-white"
+            className="inline-flex h-12 items-center justify-center rounded-[4px] bg-white px-8 text-[15px] font-medium uppercase text-black transition-colors md:hover:bg-brand-red md:hover:text-white"
           >
             Connect with us
           </a>

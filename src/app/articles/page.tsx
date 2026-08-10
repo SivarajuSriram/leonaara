@@ -39,7 +39,7 @@ export default function ArticlesPage() {
                     <img
                       src={a.img}
                       alt=""
-                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 md:group-hover:scale-105"
                     />
                   </div>
                   <div className="flex flex-col gap-2">
@@ -47,7 +47,7 @@ export default function ArticlesPage() {
                       {a.date} <span className="mx-1">·</span> The Leonaara Letter
                     </p>
                     <h2 className="m-0 text-[18px] font-normal leading-[1.25] tracking-[-0.02em] xl:text-[20px]">
-                      <span className="bg-[linear-gradient(currentColor,currentColor)] bg-no-repeat bg-left-bottom bg-[length:0%_1px] transition-[background-size,color] duration-500 ease-[cubic-bezier(0.645,0.045,0.355,1)] group-hover:bg-[length:100%_1px] group-hover:text-brand-red">
+                      <span className="bg-[linear-gradient(currentColor,currentColor)] bg-no-repeat bg-left-bottom bg-[length:0%_1px] transition-[background-size,color] duration-500 ease-[cubic-bezier(0.645,0.045,0.355,1)] md:group-hover:bg-[length:100%_1px] md:group-hover:text-brand-red">
                         {a.title}
                       </span>
                     </h2>

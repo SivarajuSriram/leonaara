@@ -3,6 +3,14 @@
 html,
 body {
   overflow-x: clip;
+  /* iOS Safari auto-inflates font size inside narrow text containers
+     ("font boosting"). Each per-word span in AnimatedText's reveal
+     animation is exactly that: a narrow overflow-hidden box around a
+     single word. Without disabling this, Safari can independently
+     boost each word's font size until none of them fit next to each
+     other anymore, forcing every word onto its own line. */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 @theme {

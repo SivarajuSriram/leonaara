@@ -16,32 +16,44 @@ export default function SectionIntro({
   headingClassName = "",
   bodyClassName = "text-gray-600",
   headingMaxWidth = "max-w-3xl",
+  bodyMaxWidth = "max-w-md",
+  headingAnimatedText = true,
+  bodyAnimatedText = false,
   className = "",
 }: {
-  eyebrow: string;
+  eyebrow?: string;
   heading: string;
   body?: string;
   eyebrowClassName?: string;
   headingClassName?: string;
   bodyClassName?: string;
   headingMaxWidth?: string;
+  bodyMaxWidth?: string;
+  headingAnimatedText?: boolean;
+  bodyAnimatedText?: boolean;
   className?: string;
 }) {
   return (
     <div className={`flex flex-col items-center text-center ${className}`}>
-      <Reveal>
-        <p className={`m-0 text-[12px] uppercase md:text-[14px] ${eyebrowClassName}`}>{eyebrow}</p>
-      </Reveal>
-      <h2
-        className={`mt-5 ${headingMaxWidth} text-[28px] font-normal leading-tight tracking-[-0.04em] md:mt-[30px] md:text-[44px] xl:mt-10 xl:text-[64px] xl:leading-[60px] ${headingClassName}`}
-      >
-        <AnimatedText text={heading} className="justify-center" />
-      </h2>
-      {body && (
-        <Reveal delay={0.4}>
-          <p className={`mt-6 max-w-md text-[14px] leading-[1.42] md:text-[16px] ${bodyClassName}`}>{body}</p>
+      {eyebrow && (
+        <Reveal>
+          <p className={`m-0 text-[12px] uppercase md:text-[14px] ${eyebrowClassName}`}>{eyebrow}</p>
         </Reveal>
       )}
+      <h2
+        className={`${eyebrow ? "mt-5 md:mt-[30px] xl:mt-10" : ""} ${headingMaxWidth} text-[28px] font-normal leading-tight tracking-[-0.04em] md:text-[44px] xl:text-[64px] xl:leading-[60px] ${headingClassName}`}
+      >
+        {headingAnimatedText ? <AnimatedText text={heading} className="text-center" /> : heading}
+      </h2>
+      {body && (bodyAnimatedText ? (
+        <div className={`mt-6 ${bodyMaxWidth} text-[14px] leading-[1.42] md:text-[16px] ${bodyClassName}`}>
+          <AnimatedText text={body} className="text-center" delay={0.4} />
+        </div>
+      ) : (
+        <Reveal delay={0.4}>
+          <p className={`mt-6 ${bodyMaxWidth} text-[14px] leading-[1.42] md:text-[16px] ${bodyClassName}`}>{body}</p>
+        </Reveal>
+      ))}
     </div>
   );
 }

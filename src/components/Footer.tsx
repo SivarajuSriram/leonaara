@@ -28,7 +28,12 @@ export default function Footer() {
   useLayoutEffect(() => {
     const el = footerRef.current;
     if (!el) return;
-    const update = () => setSpacerHeight(el.offsetHeight);
+    // A small buffer on top of the footer's own height gives the reveal
+    // headroom against sub-pixel/timing jitter (e.g. mobile browsers
+    // resizing the viewport as their address bar collapses mid-scroll),
+    // so the sliding content always fully clears the footer before it's
+    // visible, instead of landing exactly flush with zero margin.
+    const update = () => setSpacerHeight(el.offsetHeight + 24);
     update();
     const ro = new ResizeObserver(update);
     ro.observe(el);
@@ -56,7 +61,7 @@ export default function Footer() {
           <div className="flex flex-col gap-5">
             <p className="m-0 text-[12px] xl:text-[14px] uppercase text-black">Contact</p>
             <p className="m-0 text-[14px] xl:text-[16px]">
-              <a href="mailto:info@leonaara.com" className="hover:text-brand-red transition-colors">
+              <a href="mailto:info@leonaara.com" className="md:hover:text-brand-red transition-colors">
                 info@leonaara.com
               </a>
             </p>
@@ -67,12 +72,12 @@ export default function Footer() {
             <p className="m-0 text-[12px] xl:text-[14px] uppercase text-black">Follow us</p>
             <ul className="m-0 p-0 list-none flex flex-col gap-2 text-[14px] xl:text-[16px]">
               <li>
-                <a href="https://www.instagram.com/leonaara/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-red transition-colors">
+                <a href="https://www.instagram.com/leonaara/" target="_blank" rel="noopener noreferrer" className="md:hover:text-brand-red transition-colors">
                   Instagram
                 </a>
               </li>
               <li>
-                <Link href="/articles" className="hover:text-brand-red transition-colors">
+                <Link href="/articles" className="md:hover:text-brand-red transition-colors">
                   Articles
                 </Link>
               </li>
@@ -92,10 +97,7 @@ export default function Footer() {
 
           <div className="flex flex-col md:flex-row md:items-end gap-4 md:gap-6 text-[13px] xl:text-[15px]">
             <p className="m-0">&copy; {new Date().getFullYear()} Leonaara</p>
-            <Link href="/privacy-policy" className="hover:text-brand-red transition-colors">Privacy policy</Link>
-            <a href="https://marksandmethods.com" target="_blank" rel="noopener noreferrer" className="hover:text-brand-red transition-colors">
-              Credits <span className="text-brand-red">Marks & Methods</span>
-            </a>
+            <Link href="/privacy-policy" className="md:hover:text-brand-red transition-colors">Privacy policy</Link>
           </div>
         </div>
         </div>

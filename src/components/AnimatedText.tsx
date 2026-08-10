@@ -22,7 +22,6 @@ export default function AnimatedText({
   delay = 0,
 }: AnimatedTextProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const wordsRef = useRef<(HTMLSpanElement | null)[]>([]);
 
   // Split text by space
   const words = text.split(" ");
@@ -49,18 +48,20 @@ export default function AnimatedText({
   }, { scope: containerRef });
 
   return (
-    <div ref={containerRef} className={`flex flex-wrap ${className}`}>
+    <div ref={containerRef} className={className}>
       {words.map((word, index) => {
         const isHighlight = highlightWord && word.includes(highlightWord);
         return (
-          <span key={index} className="overflow-hidden inline-flex mr-[0.25em] pb-2">
-            <span
-              className={`animated-word inline-block ${isHighlight ? highlightClassName : ""}`}
-            >
-              {word}
+          <React.Fragment key={index}>
+            <span className="overflow-hidden inline-block pb-2">
+              <span
+                className={`animated-word inline-block ${isHighlight ? highlightClassName : ""}`}
+              >
+                {word}
+              </span>
             </span>
-            {index < words.length - 1 && <span className="sr-only"> </span>}
-          </span>
+            {index < words.length - 1 && " "}
+          </React.Fragment>
         );
       })}
     </div>

@@ -145,7 +145,7 @@ export default function UpgradeModelCards() {
           onPointerUp={endDrag}
           onPointerLeave={endDrag}
           onScroll={updateActiveIndex}
-          className={`flex gap-6 md:gap-10 overflow-x-auto pb-8 select-none ${
+          className={`flex touch-pan-y gap-3 md:gap-6 overflow-x-auto pb-8 select-none ${
             isDragging ? "cursor-grabbing" : "cursor-grab"
           }`}
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}

@@ -68,7 +68,7 @@ export default function WhatsIncluded() {
                   <button
                     type="button"
                     onClick={() => toggleItem(s.n)}
-                    className="mt-3 inline-flex items-center gap-2 text-[13px] font-normal text-white/40 transition-colors hover:text-white"
+                    className="mt-3 inline-flex items-center gap-2 text-[13px] font-normal text-white/40 transition-colors md:hover:text-white"
                     aria-expanded={isOpen}
                   >
                     <span className="text-brand-red">{isOpen ? "−" : "+"}</span>

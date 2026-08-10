@@ -10,7 +10,7 @@ export default function FinalCta() {
         </h2>
         <a
           href="/system-pricing"
-          className="mt-10 inline-flex h-12 items-center justify-center rounded-[4px] bg-brand-red px-8 text-[15px] font-medium text-white transition-colors hover:bg-black"
+          className="mt-10 inline-flex h-12 items-center justify-center rounded-[4px] bg-brand-red px-8 text-[15px] font-medium text-white transition-colors md:hover:bg-black"
         >
           See Pricing
         </a>

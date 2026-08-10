@@ -11,7 +11,7 @@ export default function FirstBuildIntro() {
           <p className="m-0 text-[12px] uppercase text-black md:text-[14px]">First build</p>
           <Link
             href="/#interested"
-            className="inline-flex h-12 items-center justify-center rounded-[4px] bg-brand-red px-8 text-[15px] font-medium text-white transition-colors hover:bg-black"
+            className="inline-flex h-12 items-center justify-center rounded-[4px] bg-brand-red px-8 text-[15px] font-medium text-white transition-colors md:hover:bg-black"
           >
             Book Now
           </Link>

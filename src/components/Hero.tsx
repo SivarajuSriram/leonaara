@@ -4,7 +4,6 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import HeroTitle from "./HeroTitle";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,27 +21,38 @@ export default function Hero({
     () => {
       if (!sectionRef.current || !titleWrapRef.current) return;
 
-      gsap.to(titleWrapRef.current, {
-        opacity: 0,
-        ease: "none",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
-        },
+      // The title-fade-on-scroll only makes sense on desktop, where the
+      // pinned image visibly scrolls underneath it; on mobile the user
+      // asked for the text overlay to stay put instead of fading away.
+      const mm = gsap.matchMedia();
+      mm.add("(min-width: 768px)", () => {
+        gsap.to(titleWrapRef.current, {
+          opacity: 0,
+          ease: "none",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
       });
+
+      return () => mm.revert();
     },
     { scope: sectionRef }
   );
 
   return (
     <div className="relative isolate">
-      {/* Image layer: pinned via sticky inside a 200vh box that overlaps 100vh into the
-          next section, so it stays visually static underneath the content scrolling over it,
-          then releases once the overlap runs out. Sits behind all normal-flow content. */}
-      <div className="absolute inset-x-0 top-0 -z-10 h-[200vh] w-full">
-        <div className="sticky top-0 h-screen w-full overflow-hidden bg-brand-dark">
+      {/* Image layer: pinned via sticky inside a box that overlaps into the next section,
+          so it stays visually static underneath the content scrolling over it, then releases
+          once the overlap runs out. Sits behind all normal-flow content. The overlap is capped
+          at a fixed 220px on mobile (instead of a full 100vh) because on short mobile sections
+          a 100vh overlap can outlast the next section's actual height and bleed into the one
+          after it; desktop sections are reliably tall enough for the full 100vh overlap. */}
+      <div className="absolute inset-x-0 top-0 -z-10 h-[calc(100svh_+_220px)] w-full md:h-[200vh]">
+        <div className="sticky top-0 h-[100svh] w-full overflow-hidden bg-brand-dark md:h-screen">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/hero-home.webp"
@@ -65,7 +75,7 @@ export default function Hero({
               <p className="m-0 mb-4 text-[12px] uppercase text-white md:text-[14px]">{eyebrow}</p>
             )}
             <h1 className="m-0 font-sans text-[32px] font-normal leading-none tracking-[-0.03em] text-white md:text-[44px] xl:text-[64px]">
-              <HeroTitle text={title} />
+              {title}
             </h1>
           </div>
         </div>

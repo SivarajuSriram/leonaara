@@ -44,10 +44,10 @@ export default function ExperienceIt() {
                 href={item.href}
                 target={item.href.startsWith("http") ? "_blank" : undefined}
                 rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="group inline-flex items-center gap-1 text-[14px] font-medium uppercase text-black transition-colors hover:text-brand-red"
+                className="group inline-flex items-center gap-1 text-[14px] font-medium uppercase text-black transition-colors md:hover:text-brand-red"
               >
                 {item.cta}
-                <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                <span className="transition-transform duration-300 md:group-hover:translate-x-1">→</span>
               </a>
             </div>
           ))}

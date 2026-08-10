@@ -47,10 +47,13 @@ export default function ImageHero({
 
   return (
     <div className="relative isolate">
-      {/* Image layer: pinned via sticky inside a 200vh box that overlaps 100vh into the
-          next section, so it stays visually static underneath the content scrolling over it,
-          then releases once the overlap runs out. Sits behind all normal-flow content. */}
-      <div className="absolute inset-x-0 top-0 -z-10 h-[200vh] w-full">
+      {/* Image layer: pinned via sticky inside a box that overlaps into the next section,
+          so it stays visually static underneath the content scrolling over it, then releases
+          once the overlap runs out. Sits behind all normal-flow content. The overlap is capped
+          at a fixed 220px on mobile (instead of a full 100vh) because on short mobile sections
+          a 100vh overlap can outlast the next section's actual height and bleed into the one
+          after it; desktop sections are reliably tall enough for the full 100vh overlap. */}
+      <div className="absolute inset-x-0 top-0 -z-10 h-[calc(100vh_+_220px)] w-full md:h-[200vh]">
         <div className="sticky top-0 h-screen w-full overflow-hidden bg-black">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={img} alt={alt} className="absolute inset-0 h-full w-full object-cover" />
@@ -77,7 +80,7 @@ export default function ImageHero({
             {cta && (
               <Link
                 href={cta.href}
-                className="mt-8 inline-flex h-12 items-center justify-center rounded-[4px] bg-brand-red px-8 text-[15px] font-medium text-white transition-colors hover:bg-white hover:text-black"
+                className="mt-8 inline-flex h-12 items-center justify-center rounded-[4px] bg-brand-red px-8 text-[15px] font-medium text-white transition-colors md:hover:bg-white md:hover:text-black"
               >
                 {cta.label}
               </Link>

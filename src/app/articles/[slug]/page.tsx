@@ -101,7 +101,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           <div className="mx-auto w-full max-w-[1920px] px-6">
             <Link
               href="/articles"
-              className="inline-flex items-center gap-1 text-[13px] uppercase text-gray-500 transition-colors hover:text-brand-red"
+              className="inline-flex items-center gap-1 text-[13px] uppercase text-gray-500 transition-colors md:hover:text-brand-red"
             >
               ← All articles
             </Link>
@@ -211,7 +211,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                           href={item.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="underline decoration-black/30 underline-offset-2 transition-colors hover:text-brand-red hover:decoration-brand-red"
+                          className="underline decoration-black/30 underline-offset-2 transition-colors md:hover:text-brand-red md:hover:decoration-brand-red"
                         >
                           {item.text}
                         </a>
@@ -238,7 +238,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                       <img
                         src={a.img}
                         alt=""
-                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 md:group-hover:scale-105"
                       />
                     </div>
                     <div className="flex flex-col gap-3">
@@ -249,7 +249,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                         </span>
                       </div>
                       <h3 className="m-0 text-[16px] font-normal leading-[1.25] tracking-[-0.02em]">
-                        <span className="bg-[linear-gradient(currentColor,currentColor)] bg-no-repeat bg-left-bottom bg-[length:0%_1px] transition-[background-size,color] duration-500 ease-[cubic-bezier(0.645,0.045,0.355,1)] group-hover:bg-[length:100%_1px] group-hover:text-brand-red">
+                        <span className="bg-[linear-gradient(currentColor,currentColor)] bg-no-repeat bg-left-bottom bg-[length:0%_1px] transition-[background-size,color] duration-500 ease-[cubic-bezier(0.645,0.045,0.355,1)] md:group-hover:bg-[length:100%_1px] md:group-hover:text-brand-red">
                           {a.title}
                         </span>
                       </h3>

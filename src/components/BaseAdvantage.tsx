@@ -56,8 +56,8 @@ export default function BaseAdvantage() {
   }, { scope: mediaRef });
 
   return (
-    <section className="relative w-full text-brand-dark">
-      <div ref={mediaRef} className="relative aspect-[16/9] w-full overflow-hidden bg-gray-200">
+    <section className="relative w-full bg-white text-brand-dark">
+      <div ref={mediaRef} className="relative aspect-[4/5] w-full overflow-hidden bg-gray-200 md:aspect-[16/9]">
         {images.map((img, i) => (
           // eslint-disable-next-line @next/next/no-img-element
           <img
@@ -74,7 +74,7 @@ export default function BaseAdvantage() {
 
         <header className="pointer-events-none absolute left-0 top-0 z-10 max-w-2xl p-6 md:p-10">
           <h2 className="m-0 text-[20px] font-normal leading-[1.4] tracking-[-0.03em] text-white md:text-[32px] md:leading-none xl:text-[48px]">
-            <AnimatedText text="Our Signature Creations" className="justify-start" delay={1.5} />
+            <AnimatedText text="Our Signature Creations" className="text-left" delay={1.5} />
           </h2>
         </header>
 
@@ -88,7 +88,7 @@ export default function BaseAdvantage() {
             >
               <span
                 className={`absolute inset-0 bg-black transition-opacity ${
-                  active === i ? "opacity-50" : "opacity-20 group-hover:opacity-35"
+                  active === i ? "opacity-50" : "opacity-20 md:group-hover:opacity-35"
                 }`}
               />
               <span className="relative block h-[15px] overflow-hidden">

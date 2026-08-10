@@ -23,8 +23,17 @@ export default function BuiltForPeaceFeatures() {
   return (
     <section className="w-full bg-white text-black pt-0 pb-[60px] md:pb-[100px] xl:pb-10">
       <div className="container mx-auto max-w-[1920px] px-6">
-        <div className="flex flex-col items-center gap-12 lg:flex-row lg:gap-24">
-          <div className="w-full overflow-hidden lg:w-1/2">
+        <div className="flex flex-col items-center text-center mb-6 md:mb-12 xl:mb-16">
+          <h2 className="max-w-3xl text-[28px] font-normal leading-tight tracking-[-0.04em] md:text-[44px] xl:text-[64px] xl:leading-[60px]">
+            Our Foundations
+          </h2>
+          <p className="mt-6 max-w-none text-[14px] leading-[1.42] text-gray-600 md:text-[16px]">
+            A strong foundation is the cornerstone of every enduring structure, providing stability, strength, and the confidence to build for the future.
+          </p>
+        </div>
+
+        <div className="flex flex-col items-center gap-6 lg:flex-row lg:gap-24">
+          <div className="w-full max-w-[280px] overflow-hidden mx-auto lg:mx-0 lg:w-1/2 lg:max-w-none">
             <video
               className="aspect-square w-full object-cover"
               width="1600"

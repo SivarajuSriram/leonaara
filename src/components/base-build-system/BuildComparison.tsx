@@ -74,7 +74,7 @@ export default function BuildComparison() {
           </h2>
           <a
             href="/system-pricing"
-            className="inline-flex h-12 items-center justify-center rounded-[4px] bg-brand-red px-8 text-[15px] font-medium text-white transition-colors hover:bg-black"
+            className="inline-flex h-12 items-center justify-center rounded-[4px] bg-brand-red px-8 text-[15px] font-medium text-white transition-colors md:hover:bg-black"
           >
             See Pricing
           </a>

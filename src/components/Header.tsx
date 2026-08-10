@@ -13,7 +13,7 @@ const NAV_LINKS = [
 
 const NAV_LINK_CLASS = "group relative inline-block pb-0.5";
 const NAV_UNDERLINE_CLASS =
-  "pointer-events-none absolute inset-x-0 bottom-0 h-px origin-left scale-x-0 bg-current transition-transform duration-300 ease-out group-hover:scale-x-100";
+  "pointer-events-none absolute inset-x-0 bottom-0 h-px origin-left scale-x-0 bg-current transition-transform duration-300 ease-out md:group-hover:scale-x-100";
 
 export default function Header({ light = false }: { light?: boolean }) {
   const [hidden, setHidden] = useState(false);
@@ -97,7 +97,7 @@ export default function Header({ light = false }: { light?: boolean }) {
       } ${solid || menuOpen ? "bg-white shadow-[0_1px_0_0_rgba(0,0,0,0.06)]" : "bg-transparent"}`}
     >
       <div
-        className={`pointer-events-auto flex w-full -translate-y-3 items-start justify-between px-10 pt-10 pb-0 transition-colors duration-500 ${
+        className={`pointer-events-auto relative z-50 flex w-full -translate-y-3 items-start justify-between pl-6 pr-10 pt-10 pb-0 transition-colors duration-500 md:px-10 ${
           light && !solid && !menuOpen ? "text-white" : "text-black"
         }`}
       >
@@ -157,7 +157,7 @@ export default function Header({ light = false }: { light?: boolean }) {
 
       {/* Mobile nav drawer */}
       <div
-        className={`md:hidden fixed inset-0 top-0 z-40 flex h-screen w-full flex-col justify-between bg-white px-10 pt-32 pb-10 text-black transition-opacity duration-300 ${
+        className={`md:hidden fixed inset-0 top-0 z-40 flex h-screen w-full flex-col justify-between bg-white px-10 pt-44 pb-10 text-black transition-opacity duration-300 ${
           menuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
       >
