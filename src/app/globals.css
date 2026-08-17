@@ -27,6 +27,14 @@ body {
     letter-spacing: var(--text-base-heading);
     line-height: 1;
   }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @keyframes ticker-text {

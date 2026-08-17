@@ -52,8 +52,8 @@ export default function Footer() {
           {/* Headline */}
           <div className="flex flex-col gap-5 md:col-span-1">
             <p className="m-0 text-[12px] xl:text-[14px] uppercase text-black">Leonaara</p>
-            <p className="m-0 text-[18px] md:text-[20px] xl:text-[28px] leading-[1.2]">
-              Leonaara is building the next generation of prefabricated housing – using natural, climate-resilient materials to create a sustainable and adaptable ecosystem.
+            <p className="m-0 text-[14px] leading-[1.6] text-black/80 xl:text-[16px]">
+              Leonaara is led by Founder Ravikanth Reddy Busam, alongside Executive Directors Rajashekar Reddy (Engineering), Avinash Reddy (Strategy & Customer Relations), and Srinivas Reddy (Projects & Liaisoning). Backed by a team of 23 professionals, the leadership brings 25+ years of expertise across finance, technology, and real estate, delivering 1+ million sq. ft. of development, serving 560+ homeowners, and creating ₹1,000+ crores in value. United by a vision for low-density, nature-led communities and transparent practices, they build homes designed for lasting value and well-being.
             </p>
           </div>
 

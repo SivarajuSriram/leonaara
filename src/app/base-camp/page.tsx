@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 export default function BaseCampPage() {
   return (
     <div className="bg-white min-h-screen text-black font-sans selection:bg-brand-red selection:text-white">
-      <Header />
+      <Header light />
       <main className="relative z-10 bg-white">
         <ImageHero
           img="/media/2026/04/Base-Camp-Lao-044-copy-1800x1197.jpg"

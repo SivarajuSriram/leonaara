@@ -3,11 +3,13 @@ import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import MagneticButton from "./MagneticButton";
+import { projects } from "@/lib/projects";
 
 const NAV_LINKS = [
   { href: "/system-pricing", label: "System & Pricing" },
   { href: "/base-build-system", label: "Leonaara Build" },
   { href: "/articles", label: "Articles" },
+  { href: "/projects", label: "Projects" },
   { href: "/base-camp", label: "Leonaara Camp" },
 ];
 
@@ -97,22 +99,22 @@ export default function Header({ light = false }: { light?: boolean }) {
       } ${solid || menuOpen ? "bg-white shadow-[0_1px_0_0_rgba(0,0,0,0.06)]" : "bg-transparent"}`}
     >
       <div
-        className={`pointer-events-auto relative z-50 flex w-full -translate-y-3 items-start justify-between pl-6 pr-10 pt-10 pb-0 transition-colors duration-500 md:px-10 ${
+        className={`pointer-events-auto relative z-50 flex w-full -translate-y-3 items-center justify-between pl-6 pr-10 pt-10 pb-0 transition-colors duration-500 md:px-10 ${
           light && !solid && !menuOpen ? "text-white" : "text-black"
         }`}
       >
         {/* Logo */}
-        <Link href="/" onClick={handleLogoClick} className="group flex-shrink-0 -mt-1.5">
+        <Link href="/" onClick={handleLogoClick} className="group flex-shrink-0">
           <img
             src="/leonara-logo-color.webp"
             alt="Leonaara"
             width={103}
             height={58}
-            className="h-[58px] w-auto origin-left scale-[1.55] object-contain"
+            className="h-[58px] w-auto origin-bottom-left scale-[1.55] object-contain"
           />
         </Link>
 
-          <nav className="hidden md:flex gap-5 text-xs uppercase font-normal">
+          <nav className="hidden -translate-y-4 md:flex gap-5 text-xs uppercase font-normal">
             <Link href="/" onClick={handleLogoClick} className={NAV_LINK_CLASS}>
               Home
               <span className={NAV_UNDERLINE_CLASS} />
@@ -121,16 +123,31 @@ export default function Header({ light = false }: { light?: boolean }) {
               System & Pricing
               <span className={NAV_UNDERLINE_CLASS} />
             </Link> */}
+            <div className="group/projects relative">
+              <Link href="/projects" className={NAV_LINK_CLASS}>
+                Projects
+                <span className={NAV_UNDERLINE_CLASS} />
+              </Link>
+              <div className="invisible absolute left-0 top-full pt-4 opacity-0 transition-opacity duration-200 group-hover/projects:visible group-hover/projects:opacity-100 group-focus-within/projects:visible group-focus-within/projects:opacity-100">
+                <div className="flex min-w-[200px] flex-col overflow-hidden rounded-[4px] border border-black/10 bg-white py-2 text-black shadow-lg">
+                  {projects.map((project) => (
+                    <Link
+                      key={project.slug}
+                      href={`/projects/${project.slug}`}
+                      className="px-4 py-2.5 text-center text-xs uppercase tracking-wide transition-colors hover:bg-black/5"
+                    >
+                      {project.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
             <Link href="/base-camp" className={NAV_LINK_CLASS}>
-              Projects
+              Connect
               <span className={NAV_UNDERLINE_CLASS} />
             </Link>
             <Link href="/articles" className={NAV_LINK_CLASS}>
               Blog
-              <span className={NAV_UNDERLINE_CLASS} />
-            </Link>
-            <Link href="/base-camp" className={NAV_LINK_CLASS}>
-              Connect
               <span className={NAV_UNDERLINE_CLASS} />
             </Link>
           </nav>

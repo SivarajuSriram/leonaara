@@ -103,7 +103,10 @@ function PhoneField() {
   );
 }
 
-export default function ContactForm() {
+export default function ContactForm({
+  image = "/media/2024/02/NM_01-9.jpg",
+  imageAlt = "",
+}: { image?: string; imageAlt?: string } = {}) {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -117,43 +120,47 @@ export default function ContactForm() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16 xl:gap-24">
           <div className="flex flex-col gap-8">
             <p className="m-0 text-[28px] font-normal leading-none tracking-[-0.04em] md:text-[36px] xl:text-[48px]">
-              <span>We’d love to hear from you.</span>
+              <span className="md:whitespace-nowrap">We’d love to hear from you.</span>
               <br />
               Let&apos;s chat.
             </p>
-            <div className="flex flex-col gap-4">
-              <p className="m-0 max-w-md text-[14px] leading-[1.42]">
-                Fill in the form below to share your interest with us. We will contact you with next steps to follow.
-              </p>
-            </div>
             <div className="relative aspect-[4/3] w-full max-w-md overflow-hidden rounded-[4px]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/media/2024/02/NM_01-9.jpg"
-                alt=""
+                src={image}
+                alt={imageAlt}
                 className="absolute inset-0 h-full w-full object-cover"
               />
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="flex flex-col gap-5 md:mt-16 xl:mt-20">
-            <input required placeholder="Name*" className={inputClass} />
-            <input required type="email" placeholder="Email*" className={inputClass} />
-            <PhoneField />
-            <textarea placeholder="Message" rows={4} className={`${inputClass} h-auto resize-none py-3`} />
+          <div className="flex flex-col gap-10">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-8">
+              <p className="m-0 text-[12px] uppercase text-black/50 md:text-[14px]">Get in Touch</p>
+              <p className="m-0 text-[14px] leading-[1.42]">
+                Fill in the form below to share your interest with us. We will contact you with next steps to follow.
+              </p>
+            </div>
 
-            <label className="flex items-start gap-2 text-[13px]">
-              <input type="checkbox" className="mt-0.5 h-4 w-4 shrink-0 accent-brand-red" />
-              I authorize Leonaara and its representatives to Call, SMS, Email, or WhatsApp me about its services and offers. This consent overrides any registration for DND / NDNC.
-            </label>
+            <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+              <input required placeholder="Name*" className={inputClass} />
+              <input required type="email" placeholder="Email*" className={inputClass} />
+              <PhoneField />
+              <textarea placeholder="Message" rows={4} className={`${inputClass} h-auto resize-none py-3`} />
 
-            <button
-              type="submit"
-              className="mt-2 h-12 w-full rounded-[4px] bg-black text-[15px] font-medium uppercase text-white transition-colors md:hover:bg-brand-red md:w-fit md:px-10"
-            >
-              {submitted ? "Thank you!" : "Submit"}
-            </button>
-          </form>
+              <label className="flex items-start gap-2 text-[13px]">
+                <input type="checkbox" className="mt-0.5 h-4 w-4 shrink-0 accent-brand-red" />
+                I authorize Leonaara and its representatives to Call, SMS, Email, or WhatsApp me about its services and offers. This consent overrides any registration for DND / NDNC.
+              </label>
+
+              <button
+                type="submit"
+                className="mt-2 h-12 w-full rounded-[4px] bg-black text-[15px] font-medium uppercase text-white transition-colors md:hover:bg-brand-red md:w-fit md:px-10"
+              >
+                {submitted ? "Thank you!" : "Submit"}
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
